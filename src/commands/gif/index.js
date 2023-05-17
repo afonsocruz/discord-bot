@@ -12,7 +12,6 @@ module.exports = async (message, args) => {
   let url = `${process.env.TENOR_API_URL}${keywords}&key=${process.env.TENOR_API_KEY}&limit=50`;
   try {
     let response = await axios.get(url);
-    console.log(response.data);
     const index = Math.floor(Math.random() * response.data.results.length);
     message.channel.send(response.data.results[index].url);
     message.channel.send(`GIF from Tenor: ${keywords}`);
