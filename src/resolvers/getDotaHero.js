@@ -16,10 +16,10 @@ const getDotaHero = async () => {
     Object.values(response.data).forEach((item) => {
       const hero = {
         id: item.id,
-        name: item.displayName,
+        name: item.displayName.replace(/-(?=.)/g, " "),
         stats: {
           attackType: item.stat.attackType,
-          initialArmor: item.stat.startingArmor,
+          initialArmor: item.stat.startingArmor.toFixed(2),
           initialMagicArmor: item.stat.startingMagicArmor,
           initialDamageMin: item.stat.startingDamageMin,
           initialDamageMax: item.stat.startingDamageMax,

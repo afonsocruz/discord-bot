@@ -14,10 +14,8 @@ module.exports = async (message) => {
       commands[command](message, tokens);
     } else {
       return message.channel.send(
-        "⚡ Este comando não existe, digite !help para ver todos os meus comandos."
+        "⚡ Este comando não existe, digite !help para ver todos os meus comandos." //TODO: Implement the !help command
       );
     }
-  } else {
-    console.log("bateu aqui");
   }
 };
