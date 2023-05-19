@@ -13,8 +13,6 @@ module.exports = async (message, args) => {
       (item) => item.name.toLowerCase() === keywords.toLocaleLowerCase()
     );
 
-    console.log(result);
-
     if (result) {
       let msgAsCode = `
 Herói: ${result.name}
