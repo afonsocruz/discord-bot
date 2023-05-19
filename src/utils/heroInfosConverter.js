@@ -6,6 +6,8 @@ const heroTypeConverter = (heroType) => {
       return "Inteligência";
     case "agi":
       return "Agilidade";
+    case "all":
+      return "Força | Inteligência | Agilidade";
     default:
       return null;
   }
